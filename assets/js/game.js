@@ -18,6 +18,9 @@ console.log(playerName + " attacked " + enemyName + ". " + enemyName + " now has
 playerHealth = playerHealth - enemyAttack;
 console.log(enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining");
 
-if (playerHealth > 0) {
-    console.log("Your player is still alive");
+if (playerHealth <= 0) {
+    window.alert(playerName + " has died");
+}
+else {
+    window.alert(playerName + " still has " + playerHealth + " health left");
 }
