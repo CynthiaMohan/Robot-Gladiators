@@ -6,8 +6,8 @@ var playerMoney = 10;
 var enemyName = ["Roborto", "Amy Android", "Robo Rrumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
-console.log("LetsBegin");
-window.alert("Welcome to Robot Gladiators");
+console.log("LetsBegin " + playerName);
+// window.alert("Welcome to Robot Gladiators");
 
 var fight = function (enemyName) {
 
@@ -55,8 +55,16 @@ var fight = function (enemyName) {
     };
 }
 for (let i = 0; i < enemyName.length; i++) {
-    var pickedEnemyName = enemyName[i];
-    enemyHealth = 50;
-    fight(pickedEnemyName);
+    if (playerHealth > 0) {
+        window.alert("Welcome to Robot Gladiators! Round " + (i + 1));
+        var pickedEnemyName = enemyName[i];
+        enemyHealth = 50;
+        fight(pickedEnemyName);
+    }
+    else {
+        window.alert("You have lost your robot in battle! Game Over!");
+        break;
+    }
+
 }
 //fight();
